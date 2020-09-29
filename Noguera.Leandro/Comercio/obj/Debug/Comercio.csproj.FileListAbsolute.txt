@@ -1,0 +1,12 @@
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\bin\Debug\Comercio.dll
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\bin\Debug\Comercio.pdb
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\obj\Debug\Comercio.csprojAssemblyReference.cache
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\obj\Debug\Comercio.csproj.CoreCompileInputs.cache
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\obj\Debug\Comercio.dll
+C:\Users\CX SLIM\Desktop\Ejercitacion_C_Sharp\Noguera.Leandro\Comercio\obj\Debug\Comercio.pdb
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\bin\Debug\Comercio.dll
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\bin\Debug\Comercio.pdb
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\obj\Debug\Comercio.csprojAssemblyReference.cache
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\obj\Debug\Comercio.csproj.CoreCompileInputs.cache
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\obj\Debug\Comercio.dll
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro\Comercio\obj\Debug\Comercio.pdb
