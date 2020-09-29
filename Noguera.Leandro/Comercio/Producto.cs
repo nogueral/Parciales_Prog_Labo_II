@@ -171,8 +171,8 @@ namespace Comercio
             sb.AppendLine($"Descripcion: {this.descripcion}");
             sb.AppendLine($"Stock: {this.stock.ToString()}");
             sb.AppendLine($"ID Producto: {this.idProducto.ToString()}");
-            sb.AppendLine(String.Format("Precio: ${0: #,###.00}", this.precio.ToString()));
-            sb.AppendLine("------------------------------------------");
+            sb.AppendLine(String.Format("Precio: ${0: #,###.00}", this.precio));
+            sb.AppendLine("-----------------------------------------------------------------------------------------");
 
             return sb.ToString();
         }

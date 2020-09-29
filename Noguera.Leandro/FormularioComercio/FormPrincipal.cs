@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comercio;
+using System.Media;
 
 namespace FormularioComercio
 {
     public partial class FormPrincipal : Form
     {
         bool login = false;
+        SoundPlayer auxSonido;
 
         #region Constructor
         /// <summary>
@@ -22,6 +24,7 @@ namespace FormularioComercio
         public FormPrincipal()
         {
             InitializeComponent();
+            auxSonido = new SoundPlayer();
         }
         #endregion
 
@@ -69,6 +72,7 @@ namespace FormularioComercio
             Inventario.HardcodeoProductosNoPerecederos();
             Inventario.HardcodeoProductosPerecederos();
             Inventario.HardcodeoCompras();
+            auxSonido.SoundLocation = "C:/Users/CX SLIM/Desktop/Parciales_Prog_Labo_II/Noguera.Leandro/deskbell.wav";
 
             FormLogIn auxLogin = new FormLogIn();
 
@@ -178,7 +182,7 @@ namespace FormularioComercio
 
             if (auxFormClienteExistente.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Gracias!! Vuelva prontosss", "Kwik E Mart");
+                MessageBox.Show("Gracias!! Vuelva prontosss", Inventario.NombreComercio);
             }
         }
 
@@ -194,6 +198,11 @@ namespace FormularioComercio
                 if (MessageBox.Show("Esta seguro que desea salir?", Inventario.NombreComercio, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                 {
                     e.Cancel = true;
+                } else
+                {
+                    auxSonido.Play();
+                    MessageBox.Show("Gracias!! Vuelva prontosss", Inventario.NombreComercio);
+                    
                 }
             } 
 
