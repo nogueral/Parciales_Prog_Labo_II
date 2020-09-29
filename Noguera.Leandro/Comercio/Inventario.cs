@@ -274,10 +274,13 @@ namespace Comercio
             123, 115, 51, 63, 177, 48, 55, 68, 88, 91, 145, 141, 30, 79, 54, 66, 140, 68, 130, 235, 43, 135, 138, 150, 197, 110, 88, 120, 78, 132,
             123, 115, 51 };
 
+            int[] idProducto = new int[50] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+                23, 24, 25, 26, 27, 28, 29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
             for (int i = 0; i < 50; i++)
             {
                 List<Compra> auxLista = new List<Compra>();
-                Compra auxCompra = new Compra(descripcion[i], precio[i]);
+                Compra auxCompra = new Compra(descripcion[i], precio[i], idProducto[i]);
                 auxLista.Add(auxCompra);
                 listaVentas.Add(new Venta(auxEmpleado[i], auxCliente[i], auxLista, precio[i]));
             }

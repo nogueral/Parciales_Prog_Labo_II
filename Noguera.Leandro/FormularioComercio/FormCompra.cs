@@ -82,12 +82,13 @@ namespace FormularioComercio
         {
             string auxDescripcion = (string)dgvCompra.CurrentRow.Cells["Descripcion"].Value;
             double auxPrecio = (double)dgvCompra.CurrentRow.Cells["Precio"].Value;
+            double auxId = (double)dgvCompra.CurrentRow.Cells["IdCompra"].Value;
 
             // recorre la lista y elimina el objeto
 
             for (int i = 0; i < listaCompras.Count; i++)
             {
-                if (listaCompras[i].Descripcion == auxDescripcion)
+                if (listaCompras[i].IdCompra == auxId)
                 {
                     listaCompras.Remove(listaCompras[i]);
                     break;
@@ -102,7 +103,7 @@ namespace FormularioComercio
 
             for (int i = 0; i < Inventario.ListaProductos.Count; i++)
             {
-                if (Inventario.ListaProductos[i].Descripcion == auxDescripcion)
+                if (Inventario.ListaProductos[i].Id == auxId)
                 {
                     Inventario.ListaProductos[i].Stock += 1;
                 }
@@ -141,14 +142,14 @@ namespace FormularioComercio
 
                         for (int i = 0; i < auxCantidad; i++)
                         {
-                            listaCompras.Add(new Compra(auxDescripcion, auxPrecio));
+                            listaCompras.Add(new Compra(auxDescripcion, auxPrecio, idProducto));
                         }
 
                         // Recorre la lista de productos y cuando la encuentra, reduce el stock 
 
                         for (int i = 0; i < Inventario.ListaProductos.Count; i++)
                         {
-                            if (auxDescripcion == Inventario.ListaProductos[i].Descripcion)
+                            if (idProducto == Inventario.ListaProductos[i].Id)
                             {
                                 Inventario.ListaProductos[i].Stock -= auxCantidad;
                             }

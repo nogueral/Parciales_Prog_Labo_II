@@ -10,6 +10,7 @@ namespace Comercio
     {
         string descripcion;
         double precio;
+        int idCompra;
 
         #region Constructores
         /// <summary>
@@ -26,10 +27,12 @@ namespace Comercio
         /// </summary>
         /// <param name="descripcion"></param>
         /// <param name="precio"></param>
-        public Compra(string descripcion, double precio):this()
+        /// /// <param name="idCompra"></param>
+        public Compra(string descripcion, double precio, int idCompra):this()
         {
             this.descripcion = descripcion;
             this.precio = precio;
+            this.idCompra = idCompra;
         }
         #endregion
 
@@ -40,6 +43,14 @@ namespace Comercio
         public string Descripcion
         {
             get { return this.descripcion; }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public double IdCompra
+        {
+            get { return this.idCompra; }
         }
 
         /// <summary>
