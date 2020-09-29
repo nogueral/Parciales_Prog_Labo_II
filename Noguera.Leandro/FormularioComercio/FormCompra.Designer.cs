@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
             this.btnCargarCliente = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +93,7 @@
             this.dgvCompra.RowTemplate.Height = 31;
             this.dgvCompra.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCompra.Size = new System.Drawing.Size(783, 178);
+            this.dgvCompra.Size = new System.Drawing.Size(855, 178);
             this.dgvCompra.TabIndex = 2;
             this.dgvCompra.DoubleClick += new System.EventHandler(this.dgvCompra_DoubleClick);
             // 
@@ -100,9 +101,9 @@
             // 
             this.btnClienteExistente.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnClienteExistente.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClienteExistente.Location = new System.Drawing.Point(633, 513);
+            this.btnClienteExistente.Location = new System.Drawing.Point(559, 513);
             this.btnClienteExistente.Name = "btnClienteExistente";
-            this.btnClienteExistente.Size = new System.Drawing.Size(213, 71);
+            this.btnClienteExistente.Size = new System.Drawing.Size(213, 70);
             this.btnClienteExistente.TabIndex = 4;
             this.btnClienteExistente.Text = "Seleccionar cliente existente";
             this.btnClienteExistente.UseVisualStyleBackColor = false;
@@ -140,9 +141,9 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(601, 15);
+            this.txtCantidad.Location = new System.Drawing.Point(604, 12);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(245, 29);
+            this.txtCantidad.Size = new System.Drawing.Size(314, 29);
             this.txtCantidad.TabIndex = 0;
             // 
             // label1
@@ -198,7 +199,7 @@
             this.dgvProductos.RowTemplate.Height = 31;
             this.dgvProductos.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProductos.Size = new System.Drawing.Size(783, 190);
+            this.dgvProductos.Size = new System.Drawing.Size(855, 190);
             this.dgvProductos.TabIndex = 1;
             this.dgvProductos.DoubleClick += new System.EventHandler(this.dgvProductos_DoubleClick);
             // 
@@ -206,13 +207,25 @@
             // 
             this.btnCargarCliente.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCargarCliente.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarCliente.Location = new System.Drawing.Point(393, 513);
+            this.btnCargarCliente.Location = new System.Drawing.Point(339, 514);
             this.btnCargarCliente.Name = "btnCargarCliente";
-            this.btnCargarCliente.Size = new System.Drawing.Size(213, 71);
+            this.btnCargarCliente.Size = new System.Drawing.Size(214, 70);
             this.btnCargarCliente.TabIndex = 3;
             this.btnCargarCliente.Text = "Cargar cliente";
             this.btnCargarCliente.UseVisualStyleBackColor = false;
             this.btnCargarCliente.Click += new System.EventHandler(this.btnCargarCliente_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSalir.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(778, 514);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(140, 69);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FormCompra
             // 
@@ -220,6 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(970, 687);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCargarCliente);
             this.Controls.Add(this.dgvProductos);
             this.Controls.Add(this.label1);
@@ -255,5 +269,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvProductos;
         private System.Windows.Forms.Button btnCargarCliente;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

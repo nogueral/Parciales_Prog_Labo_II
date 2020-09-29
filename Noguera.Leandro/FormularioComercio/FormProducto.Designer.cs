@@ -42,6 +42,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbTipoProducto = new System.Windows.Forms.ComboBox();
+            this.lblTipoProducto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -110,7 +112,7 @@
             // 
             this.btnCargarProd.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnCargarProd.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargarProd.Location = new System.Drawing.Point(252, 305);
+            this.btnCargarProd.Location = new System.Drawing.Point(252, 366);
             this.btnCargarProd.Name = "btnCargarProd";
             this.btnCargarProd.Size = new System.Drawing.Size(109, 50);
             this.btnCargarProd.TabIndex = 4;
@@ -122,7 +124,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnSalir.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(536, 305);
+            this.btnSalir.Location = new System.Drawing.Point(536, 366);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(109, 50);
             this.btnSalir.TabIndex = 7;
@@ -134,7 +136,7 @@
             // 
             this.btnStock.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnStock.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.Location = new System.Drawing.Point(252, 378);
+            this.btnStock.Location = new System.Drawing.Point(252, 446);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(393, 50);
             this.btnStock.TabIndex = 6;
@@ -163,7 +165,7 @@
             // 
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnLimpiar.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(390, 305);
+            this.btnLimpiar.Location = new System.Drawing.Point(392, 366);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(109, 50);
             this.btnLimpiar.TabIndex = 5;
@@ -171,12 +173,33 @@
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
+            // cmbTipoProducto
+            // 
+            this.cmbTipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoProducto.FormattingEnabled = true;
+            this.cmbTipoProducto.Location = new System.Drawing.Point(311, 293);
+            this.cmbTipoProducto.Name = "cmbTipoProducto";
+            this.cmbTipoProducto.Size = new System.Drawing.Size(334, 32);
+            this.cmbTipoProducto.TabIndex = 12;
+            // 
+            // lblTipoProducto
+            // 
+            this.lblTipoProducto.AutoSize = true;
+            this.lblTipoProducto.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoProducto.Location = new System.Drawing.Point(126, 298);
+            this.lblTipoProducto.Name = "lblTipoProducto";
+            this.lblTipoProducto.Size = new System.Drawing.Size(142, 27);
+            this.lblTipoProducto.TabIndex = 13;
+            this.lblTipoProducto.Text = "Tipo producto";
+            // 
             // formProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 477);
+            this.ClientSize = new System.Drawing.Size(800, 551);
+            this.Controls.Add(this.lblTipoProducto);
+            this.Controls.Add(this.cmbTipoProducto);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.txtId);
@@ -197,6 +220,7 @@
             this.Name = "formProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.formProducto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +241,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ComboBox cmbTipoProducto;
+        private System.Windows.Forms.Label lblTipoProducto;
     }
 }

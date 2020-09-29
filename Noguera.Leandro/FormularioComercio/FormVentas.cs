@@ -62,6 +62,18 @@ namespace FormularioComercio
             this.dgvListaVentas.DataSource = null;
             this.dgvListaVentas.DataSource = auxListaVentas;
         }
+
+        /// <summary>
+        /// Cierra el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         #endregion
+
+
     }
 }

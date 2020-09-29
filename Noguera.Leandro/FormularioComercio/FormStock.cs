@@ -33,21 +33,35 @@ namespace FormularioComercio
         {  
             this.lblStockTotal.Text = Inventario.StockTotal().ToString();
 
-            CargarDatagrid();
+            CargarDatagridStockTotal();
         }
 
         /// <summary>
         /// Carga del datagridview
         /// </summary>
-        private void CargarDatagrid()
+        private void CargarDatagridStockParcial()
         {
             List<Producto> auxLista;
 
             auxLista = Inventario.StockParcial();
 
+            this.lblEncabezadoDgv.Text = "Productos con menos de 10 unidades en stock:";
+
             this.dgvStockProductos.DataSource = null;
 
             this.dgvStockProductos.DataSource = auxLista;
+        }
+
+        /// <summary>
+        /// Carga del datagridview
+        /// </summary>
+        private void CargarDatagridStockTotal()
+        {
+            this.lblEncabezadoDgv.Text = "Listado total de productos:";
+            
+            this.dgvStockProductos.DataSource = null;
+
+            this.dgvStockProductos.DataSource = Inventario.ListaProductos;
         }
 
         /// <summary>
@@ -59,6 +73,29 @@ namespace FormularioComercio
         {
             this.Close();
         }
+
+
+        /// <summary>
+        /// Muestra el stock total de productos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStockTotal_Click(object sender, EventArgs e)
+        {
+            CargarDatagridStockTotal();
+        }
+
+        /// <summary>
+        /// Muestra los productos con menos de 10 unidades en stock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStockParcial_Click(object sender, EventArgs e)
+        {
+            CargarDatagridStockParcial();
+        }
+
         #endregion
+
     }
 }

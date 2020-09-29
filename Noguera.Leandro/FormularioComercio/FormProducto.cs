@@ -26,6 +26,17 @@ namespace FormularioComercio
         #endregion
 
         #region Metodos
+
+        /// <summary>
+        /// Inicializa el enumerador ETipo en el combobox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void formProducto_Load(object sender, EventArgs e)
+        {
+            this.cmbTipoProducto.DataSource = Enum.GetValues(typeof(Producto.ETipo));
+        }
+
         /// <summary>
         /// Convierte la primera letra en mayuscula y el resto en minusculas
         /// </summary>
@@ -57,20 +68,43 @@ namespace FormularioComercio
             {
                 if(!Validar.CerosYnegativos(precio) && !Validar.CerosYnegativos(stock) && !Validar.CerosYnegativos(id))
                 {
-                    auxProducto = new Producto(this.txtDescripcion.Text, id, precio, stock);
-
-                    if (Inventario.ListaProductos + auxProducto)
+                    if (this.cmbTipoProducto.SelectedIndex != -1 && (Producto.ETipo)this.cmbTipoProducto.SelectedValue == Producto.ETipo.noPerecedero)
                     {
-                        MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                        auxProducto = new ProductoNoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
 
-                    }
-                    else
+                        if (Inventario.ListaProductos + auxProducto)
+                        {
+                            MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                            MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
+                            MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
+                        }
+
+                        this.Limpiar();
+
+                    } else
                     {
-                        MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
-                        MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
-                    }
+                        auxProducto = new ProductoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
 
-                    this.Limpiar();
+                        if (Inventario.ListaProductos + auxProducto)
+                        {
+                            MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                            MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
+                            MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
+                        }
+
+                        this.Limpiar();
+
+                    } 
 
                 } else
                 {
@@ -127,5 +161,7 @@ namespace FormularioComercio
             this.Limpiar();
         }
         #endregion
+
+
     }
 }

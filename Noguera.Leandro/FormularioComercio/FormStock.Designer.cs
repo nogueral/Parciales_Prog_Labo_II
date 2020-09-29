@@ -37,6 +37,8 @@
             this.dgvStockProductos = new System.Windows.Forms.DataGridView();
             this.lblEncabezadoDgv = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnStockTotal = new System.Windows.Forms.Button();
+            this.btnStockParcial = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +133,38 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnStockTotal
+            // 
+            this.btnStockTotal.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnStockTotal.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockTotal.Location = new System.Drawing.Point(596, 435);
+            this.btnStockTotal.Name = "btnStockTotal";
+            this.btnStockTotal.Size = new System.Drawing.Size(224, 56);
+            this.btnStockTotal.TabIndex = 5;
+            this.btnStockTotal.Text = "Total de productos";
+            this.btnStockTotal.UseVisualStyleBackColor = false;
+            this.btnStockTotal.Click += new System.EventHandler(this.btnStockTotal_Click);
+            // 
+            // btnStockParcial
+            // 
+            this.btnStockParcial.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnStockParcial.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockParcial.Location = new System.Drawing.Point(290, 435);
+            this.btnStockParcial.Name = "btnStockParcial";
+            this.btnStockParcial.Size = new System.Drawing.Size(284, 56);
+            this.btnStockParcial.TabIndex = 6;
+            this.btnStockParcial.Text = "Stock menor a 10 unidades";
+            this.btnStockParcial.UseVisualStyleBackColor = false;
+            this.btnStockParcial.Click += new System.EventHandler(this.btnStockParcial_Click);
+            // 
             // FormStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1007, 503);
+            this.Controls.Add(this.btnStockParcial);
+            this.Controls.Add(this.btnStockTotal);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblEncabezadoDgv);
             this.Controls.Add(this.dgvStockProductos);
@@ -163,5 +191,7 @@
         private System.Windows.Forms.DataGridView dgvStockProductos;
         private System.Windows.Forms.Label lblEncabezadoDgv;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnStockTotal;
+        private System.Windows.Forms.Button btnStockParcial;
     }
 }

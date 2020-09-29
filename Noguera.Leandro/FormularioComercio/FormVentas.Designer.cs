@@ -37,6 +37,7 @@
             this.dgvListaVentas = new System.Windows.Forms.DataGridView();
             this.lblEmpleado = new System.Windows.Forms.Label();
             this.lblVentasEmpleado = new System.Windows.Forms.Label();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaVentas)).BeginInit();
             this.SuspendLayout();
@@ -77,7 +78,7 @@
             this.dgvListaEmpleados.RowTemplate.Height = 31;
             this.dgvListaEmpleados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvListaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaEmpleados.Size = new System.Drawing.Size(1039, 150);
+            this.dgvListaEmpleados.Size = new System.Drawing.Size(998, 150);
             this.dgvListaEmpleados.TabIndex = 0;
             this.dgvListaEmpleados.DoubleClick += new System.EventHandler(this.dgvListaEmpleados_DoubleClick);
             // 
@@ -118,7 +119,7 @@
             this.dgvListaVentas.RowTemplate.Height = 31;
             this.dgvListaVentas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvListaVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaVentas.Size = new System.Drawing.Size(1039, 217);
+            this.dgvListaVentas.Size = new System.Drawing.Size(998, 217);
             this.dgvListaVentas.TabIndex = 1;
             // 
             // lblEmpleado
@@ -141,12 +142,25 @@
             this.lblVentasEmpleado.TabIndex = 3;
             this.lblVentasEmpleado.Text = "Ventas del empleado:";
             // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnSalir.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(931, 486);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(101, 58);
+            this.btnSalir.TabIndex = 4;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1181, 548);
+            this.ClientSize = new System.Drawing.Size(1181, 562);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblVentasEmpleado);
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.dgvListaVentas);
@@ -171,5 +185,6 @@
         private System.Windows.Forms.DataGridView dgvListaVentas;
         private System.Windows.Forms.Label lblEmpleado;
         private System.Windows.Forms.Label lblVentasEmpleado;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

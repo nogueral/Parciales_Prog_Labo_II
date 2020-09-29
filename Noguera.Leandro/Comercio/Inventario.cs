@@ -181,27 +181,58 @@ namespace Comercio
         }
 
         /// <summary>
+        /// Hace una carga instantanea de 5 productos perecederos
+        /// </summary>
+        public static void HardcodeoProductosPerecederos()
+        {
+            string[] descripcion = new string[5] { "Leche", "Queso", "Yogurt", "Crema", "Queso untable"};
+
+            double[] precio = new double[5] { 54, 235, 110, 115, 51};
+
+            int[] idProducto = new int[5] { 2, 7, 13, 18, 19 };
+
+            int[] stock = new int[5] { 7, 44, 48, 50, 78};
+
+            Producto.ETipo[] tipoProducto = new Producto.ETipo[5] {Producto.ETipo.perecedero,Producto.ETipo.perecedero,  
+            Producto.ETipo.perecedero, Producto.ETipo.perecedero, Producto.ETipo.perecedero};
+
+            for (int i = 0; i < 5; i++)
+            {
+                listaProductos.Add(new ProductoPerecedero(descripcion[i], idProducto[i], precio[i], stock[i], tipoProducto[i]));
+            }
+        }
+
+        /// <summary>
         /// Hace una carga instantanea de 30 productos
         /// </summary>
-        public static void HardcodeoProductos()
+        public static void HardcodeoProductosNoPerecederos()
         {
-            string[] descripcion = new string[30] { "Azucar", "Leche", "Yerba", "Chocolate", "Galletitas", "Pan lactal", "Queso",
-            "Jabon", "Shampoo", "Acondicionador", "Miel", "Cereales", "Yogurt", "Fideos", "Gaseosa", "Jabon liquido",
-            "Dulce de leche", "Crema", "Queso untable", "Te", "Arroz", "Jabon en polvo", "Mate cocido", "Salsa de tomate",
+            string[] descripcion = new string[25] { "Azucar", "Yerba", "Chocolate", "Galletitas", "Pan lactal", 
+            "Jabon", "Shampoo", "Acondicionador", "Miel", "Cereales", "Fideos", "Gaseosa", "Jabon liquido",
+            "Dulce de leche", "Te", "Arroz", "Jabon en polvo", "Mate cocido", "Salsa de tomate",
             "Arvejas", "Choclo", "Atun", "Jugo de naranja", "Jugo de manzana", "Caldo" };
 
-            double[] precio = new double[30] { 79, 54, 66, 140, 68, 130, 235, 43, 135, 138, 150, 197, 110, 88, 120, 78, 132,
-            123, 115, 51, 63, 177, 48, 55, 68, 88, 91, 145, 141, 30 };
+            double[] precio = new double[25] { 79, 54, 66, 140, 68, 130, 43, 135, 138, 150, 197, 88, 120, 78, 132,
+            123, 115, 63, 177, 48, 55, 68, 88, 91, 145};
 
-            int[] idProducto = new int[30] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+            int[] idProducto = new int[25] { 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 16, 17, 20, 21, 22,
                 23, 24, 25, 26, 27, 28, 29, 30 };
 
-            int[] stock = new int[30] { 8, 7, 9, 3, 15, 23, 44, 18, 2, 4, 5, 6, 48, 63, 84, 91, 110, 50, 78, 69, 78, 89, 108,
+            int[] stock = new int[25] { 8, 7, 9, 3, 15, 23, 44, 18, 2, 4, 5, 6, 48, 63, 84, 91, 110, 50,
             97, 99, 9, 9, 15, 27, 32, };
 
-            for (int i = 0; i < 30; i++)
+            Producto.ETipo[] tipoProducto = new Producto.ETipo[25] {Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero,Producto.ETipo.noPerecedero,Producto.ETipo.noPerecedero ,Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero};
+
+            for (int i = 0; i < 25; i++)
             {
-                listaProductos.Add(new Producto(descripcion[i], idProducto[i], precio[i], stock[i]));
+                listaProductos.Add(new ProductoNoPerecedero(descripcion[i], idProducto[i], precio[i], stock[i], tipoProducto[i]));
             }
         }
 

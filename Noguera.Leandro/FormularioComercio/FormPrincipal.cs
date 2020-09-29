@@ -27,11 +27,30 @@ namespace FormularioComercio
 
         #region Metodos
         /// <summary>
-        /// Crea un formulario producto
+        /// Llama al metodo cargar producto
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnProducto_Click(object sender, EventArgs e)
+        {
+            CargarProducto();
+        }
+
+        /// <summary>
+        /// Llama al metodo cargar producto
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cargarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CargarProducto();
+        }
+
+
+        /// <summary>
+        /// Crea un formulario de tipo producto
+        /// </summary>
+        private void CargarProducto()
         {
             formProducto auxProducto = new formProducto();
 
@@ -47,7 +66,8 @@ namespace FormularioComercio
         {
             Inventario.HardcodeoClientes();
             Inventario.HardcodeoEmpleados();
-            Inventario.HardcodeoProductos();
+            Inventario.HardcodeoProductosNoPerecederos();
+            Inventario.HardcodeoProductosPerecederos();
             Inventario.HardcodeoCompras();
 
             FormLogIn auxLogin = new FormLogIn();
@@ -75,17 +95,54 @@ namespace FormularioComercio
         /// <param name="e"></param>
         private void btnStock_Click(object sender, EventArgs e)
         {
+            VerStock();
+        }
+
+        /// <summary>
+        /// Crea un formulario que muestra el stock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void verStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VerStock();
+        }
+
+        /// <summary>
+        /// Crea un formulario que muestra el stock
+        /// </summary>
+        private void VerStock()
+        {
             FormStock auxStock = new FormStock();
 
             auxStock.Show();
         }
 
+
         /// <summary>
-        /// Crea un formulario que muestra el listado de ventas
+        /// Llama al metodo ListaVentas
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnVenta_Click(object sender, EventArgs e)
+        {
+            ListaVentas();
+        }
+
+        /// <summary>
+        /// Llama al metodo ListaVentas
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void listadoVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaVentas();
+        }
+
+        /// <summary>
+        /// Crea un formulario que muestra el listado de ventas
+        /// </summary>
+        private void ListaVentas()
         {
             FormVentas auxFormVentas = new FormVentas();
 
@@ -93,11 +150,29 @@ namespace FormularioComercio
         }
 
         /// <summary>
-        /// Crea un formulario de compra
+        /// Llama al metodo NuevaCompra
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnCompra_Click(object sender, EventArgs e)
+        {
+            NuevaCompra();
+        }
+
+        /// <summary>
+        /// Llama al metodo NuevaCompra
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void nuevaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NuevaCompra();
+        }
+
+        /// <summary>
+        /// Crea un formulario de compra
+        /// </summary>
+        private void NuevaCompra()
         {
             FormCompra auxFormClienteExistente = new FormCompra();
 
@@ -123,6 +198,18 @@ namespace FormularioComercio
             } 
 
         }
+
+        /// <summary>
+        /// Cierra el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #endregion
+
     }
 }

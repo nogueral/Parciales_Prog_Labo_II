@@ -7,15 +7,20 @@ using System.Threading.Tasks;
 
 namespace Comercio
 {
-#pragma warning disable CS0660
-#pragma warning disable CS0661
 
-    public class Producto
+    public abstract class Producto
     {
-        string descripcion;
-        int idProducto;
-        double precio;
-        int stock;
+        protected string descripcion;
+        protected int idProducto;
+        protected double precio;
+        protected int stock;
+        protected ETipo tipoProducto;
+
+        public enum ETipo
+        {
+            perecedero,
+            noPerecedero
+        }
 
         #region Constructores
         /// <summary>
@@ -36,12 +41,14 @@ namespace Comercio
         /// <param name="idProducto"></param>
         /// <param name="precio"></param>
         /// <param name="stock"></param>
-        public Producto(string descripcion, int idProducto, double precio, int stock):this()
+        /// <param name="tipoProducto"></param>
+        public Producto(string descripcion, int idProducto, double precio, int stock, ETipo tipoProducto):this()
         {
             this.descripcion = descripcion;
             this.idProducto = idProducto;
             this.precio = precio;
             this.stock = stock;
+            this.tipoProducto = tipoProducto;
         }
         #endregion
 
@@ -152,5 +159,31 @@ namespace Comercio
 
         #endregion
 
+
+        /// <summary>
+        /// Genera un stringbuilder con todos los datos del producto
+        /// </summary>
+        /// <returns></returns>
+        public virtual string Mostrar()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Descripcion: {this.descripcion}");
+            sb.AppendLine($"Stock: {this.stock.ToString()}");
+            sb.AppendLine($"ID Producto: {this.idProducto.ToString()}");
+            sb.AppendLine(String.Format("Precio: ${0: #,###.00}", this.precio.ToString()));
+            sb.AppendLine("------------------------------------------");
+
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// override del metodo mostrar
+        /// </summary>
+        /// <returns></returns>
+        public override string ToString()
+        {
+            return this.Mostrar();
+        }
     }
 }
