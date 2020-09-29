@@ -20,6 +20,7 @@ namespace Comercio
         {
             this.descripcion = "Sin descripcion";
             this.precio = -1;
+            this.idCompra = -1;
         }
 
         /// <summary>
