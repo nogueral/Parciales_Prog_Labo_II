@@ -329,9 +329,10 @@ namespace Comercio
             for (int i = 0; i < 50; i++)
             {
                 List<Compra> auxLista = new List<Compra>();
-                Compra auxCompra = new Compra(descripcion[i], precio[i], idProducto[i]);
-                auxLista.Add(auxCompra);
-                listaVentas.Add(new Venta(auxEmpleado[i], auxCliente[i], auxLista, precio[i]));
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                auxLista.Add(new Compra(descripcion[i], precio[i], idProducto[i]));
+                listaVentas.Add(new Venta(auxEmpleado[i], auxCliente[i], auxLista, (precio[i]*3)));
             }
         }
 
