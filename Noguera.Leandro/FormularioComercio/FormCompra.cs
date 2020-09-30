@@ -198,6 +198,11 @@ namespace FormularioComercio
                 {
                     if (Inventario.ValidarCliente(auxClienteNuevo.AuxCliente))
                     {
+                        //Agrega venta, a la lista de ventas 
+
+                        Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
+
                         // Si el cliente es miembro de la familia Simpson, aplica descuento.
 
                         MessageBox.Show("Por ser miembros de la familia Simpson tiene un descuentos del 13%", Inventario.NombreComercio);
@@ -211,6 +216,7 @@ namespace FormularioComercio
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio,"/ticketCompra"));
                         auxComprobante.WriteLine(Inventario.NombreComercio);
+                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count-1].Ticket}");
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
                         auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteNuevo.AuxCliente.Nombre} {auxClienteNuevo.AuxCliente.Apellido}"));
@@ -229,10 +235,16 @@ namespace FormularioComercio
                     {
                         MessageBox.Show(String.Format("Montos abonados: ${0:#,###.00}", auxMontoTotal), Inventario.NombreComercio);
 
+                        //Agrega venta, a la lista de ventas 
+
+                        Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
+
                         // genera comprobante de compra
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
                         auxComprobante.WriteLine(Inventario.NombreComercio);
+                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
                         auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteNuevo.AuxCliente.Nombre} {auxClienteNuevo.AuxCliente.Apellido}"));
@@ -245,11 +257,6 @@ namespace FormularioComercio
                         auxComprobante.WriteLine("Gracias! Vuelva prontosss");
                         auxComprobante.Close();
                     }
-
-                    //Agrega venta, a la lista de ventas 
-
-                    Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
-                        this.listaCompras, this.auxMontoTotal));
 
                     // reproduce un sonido al finalizar la compra
 
@@ -291,10 +298,16 @@ namespace FormularioComercio
                         MessageBox.Show(String.Format("Total compras: ${0:#,###.00}\n Descuentos (13%): S{1:#,###.00}\n Montos abonados: ${2:#,###.00}",
                         montoOriginal, descuento, auxMontoTotal), Inventario.NombreComercio);
 
+                        // Agrega venta a la lista de ventas 
+
+                        Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteExistente.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
+
                         // genera comprobante de compra
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
                         auxComprobante.WriteLine(Inventario.NombreComercio);
+                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
                         auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteExistente.AuxCliente.Nombre} {auxClienteExistente.AuxCliente.Apellido}"));
@@ -313,10 +326,16 @@ namespace FormularioComercio
                     {
                         MessageBox.Show(String.Format("Montos abonados: ${0:#,###.00}", auxMontoTotal), Inventario.NombreComercio);
 
+                        // Agrega venta a la lista de ventas 
+
+                        Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteExistente.AuxCliente,
+                        this.listaCompras, this.auxMontoTotal));
+
                         // genera comprobante de compra
 
                         StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
                         auxComprobante.WriteLine(Inventario.NombreComercio);
+                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
                         auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
                         auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
                         auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteExistente.AuxCliente.Nombre} {auxClienteExistente.AuxCliente.Apellido}"));
@@ -330,10 +349,6 @@ namespace FormularioComercio
                         auxComprobante.Close();
                     }
 
-                    // Agrega venta a la lista de ventas 
-
-                    Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteExistente.AuxCliente,
-                        this.listaCompras, this.auxMontoTotal));
 
                     // reproduce un sonido al finalizar la compra
 

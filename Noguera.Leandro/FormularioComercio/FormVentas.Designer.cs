@@ -64,7 +64,7 @@
             this.dgvListaEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvListaEmpleados.EnableHeadersVisualStyles = false;
             this.dgvListaEmpleados.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgvListaEmpleados.Location = new System.Drawing.Point(34, 49);
+            this.dgvListaEmpleados.Location = new System.Drawing.Point(12, 39);
             this.dgvListaEmpleados.Name = "dgvListaEmpleados";
             this.dgvListaEmpleados.ReadOnly = true;
             this.dgvListaEmpleados.RowHeadersVisible = false;
@@ -78,7 +78,7 @@
             this.dgvListaEmpleados.RowTemplate.Height = 31;
             this.dgvListaEmpleados.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvListaEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaEmpleados.Size = new System.Drawing.Size(998, 150);
+            this.dgvListaEmpleados.Size = new System.Drawing.Size(1074, 150);
             this.dgvListaEmpleados.TabIndex = 0;
             this.dgvListaEmpleados.DoubleClick += new System.EventHandler(this.dgvListaEmpleados_DoubleClick);
             // 
@@ -105,7 +105,7 @@
             this.dgvListaVentas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvListaVentas.EnableHeadersVisualStyles = false;
             this.dgvListaVentas.GridColor = System.Drawing.SystemColors.Highlight;
-            this.dgvListaVentas.Location = new System.Drawing.Point(34, 263);
+            this.dgvListaVentas.Location = new System.Drawing.Point(12, 263);
             this.dgvListaVentas.Name = "dgvListaVentas";
             this.dgvListaVentas.ReadOnly = true;
             this.dgvListaVentas.RowHeadersVisible = false;
@@ -119,14 +119,14 @@
             this.dgvListaVentas.RowTemplate.Height = 31;
             this.dgvListaVentas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvListaVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvListaVentas.Size = new System.Drawing.Size(998, 217);
+            this.dgvListaVentas.Size = new System.Drawing.Size(1074, 217);
             this.dgvListaVentas.TabIndex = 1;
             // 
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
             this.lblEmpleado.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleado.Location = new System.Drawing.Point(29, 9);
+            this.lblEmpleado.Location = new System.Drawing.Point(12, 9);
             this.lblEmpleado.Name = "lblEmpleado";
             this.lblEmpleado.Size = new System.Drawing.Size(110, 27);
             this.lblEmpleado.TabIndex = 2;
@@ -136,7 +136,7 @@
             // 
             this.lblVentasEmpleado.AutoSize = true;
             this.lblVentasEmpleado.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVentasEmpleado.Location = new System.Drawing.Point(29, 215);
+            this.lblVentasEmpleado.Location = new System.Drawing.Point(12, 216);
             this.lblVentasEmpleado.Name = "lblVentasEmpleado";
             this.lblVentasEmpleado.Size = new System.Drawing.Size(211, 27);
             this.lblVentasEmpleado.TabIndex = 3;
@@ -146,7 +146,7 @@
             // 
             this.btnSalir.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnSalir.Font = new System.Drawing.Font("Open Sans", 8.142858F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(931, 486);
+            this.btnSalir.Location = new System.Drawing.Point(985, 486);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 58);
             this.btnSalir.TabIndex = 4;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1181, 562);
+            this.ClientSize = new System.Drawing.Size(1342, 660);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblVentasEmpleado);
             this.Controls.Add(this.lblEmpleado);

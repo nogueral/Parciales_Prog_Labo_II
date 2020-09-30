@@ -12,6 +12,8 @@ namespace Comercio
         Cliente comprador;
         List<Compra> listaCompra;
         double montoTotal;
+        static int NroTicket = 0;
+        int ticket;
 
         #region Constructores
         /// <summary>
@@ -20,6 +22,7 @@ namespace Comercio
         private Venta()
         {
             listaCompra = new List<Compra>();
+            NroTicket++;
         }
 
         /// <summary>
@@ -35,6 +38,7 @@ namespace Comercio
             this.comprador = comprador;
             this.listaCompra = listaCompra;
             this.montoTotal = montoTotal;
+            this.ticket = NroTicket;
         }
         #endregion
 
@@ -53,6 +57,14 @@ namespace Comercio
         public int Id
         {
             get { return vendedor.IdEmpleado; }
+        }
+
+        /// <summary>
+        /// Getter de atributo ID del objeto de tipo Empleado
+        /// </summary>
+        public int Ticket
+        {
+            get { return this.ticket; }
         }
 
         /// <summary>
