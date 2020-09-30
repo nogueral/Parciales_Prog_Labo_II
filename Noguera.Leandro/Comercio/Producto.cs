@@ -19,7 +19,8 @@ namespace Comercio
         public enum ETipo
         {
             perecedero,
-            noPerecedero
+            noPerecedero,
+            almacen
         }
 
         #region Constructores

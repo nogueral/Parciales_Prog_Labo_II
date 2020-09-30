@@ -68,43 +68,59 @@ namespace FormularioComercio
             {
                 if(!Validar.CerosYnegativos(precio) && !Validar.CerosYnegativos(stock) && !Validar.CerosYnegativos(id))
                 {
-                    if (this.cmbTipoProducto.SelectedIndex != -1 && (Producto.ETipo)this.cmbTipoProducto.SelectedValue == Producto.ETipo.noPerecedero)
+                    if(this.cmbTipoProducto.SelectedIndex != -1)
                     {
-                        auxProducto = new ProductoNoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
-
-                        if (Inventario.ListaProductos + auxProducto)
+                        switch ((Producto.ETipo)this.cmbTipoProducto.SelectedValue)
                         {
-                            MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
-                            MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+                            case Producto.ETipo.perecedero:
+                                auxProducto = new ProductoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
 
+                                if (Inventario.ListaProductos + auxProducto)
+                                {
+                                    MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                                    MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
+                                    MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
+                                }
+
+                                this.Limpiar();
+                                break;
+                            case Producto.ETipo.noPerecedero:
+                                auxProducto = new ProductoNoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
+
+                                if (Inventario.ListaProductos + auxProducto)
+                                {
+                                    MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                                    MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
+                                    MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
+                                }
+                                this.Limpiar();
+                                break;
+                            case Producto.ETipo.almacen:
+                                auxProducto = new ProductoAlmacen(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
+
+                                if (Inventario.ListaProductos + auxProducto)
+                                {
+                                    MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
+                                    MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
+                                    MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
+                                }
+                                this.Limpiar();
+                                break;
                         }
-                        else
-                        {
-                            MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
-                            MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
-                        }
-
-                        this.Limpiar();
-
-                    } else
-                    {
-                        auxProducto = new ProductoPerecedero(this.txtDescripcion.Text, id, precio, stock, (Producto.ETipo)this.cmbTipoProducto.SelectedValue);
-
-                        if (Inventario.ListaProductos + auxProducto)
-                        {
-                            MessageBox.Show("Producto cargado con exitos", Inventario.NombreComercio);
-                            MessageBox.Show(auxProducto.ToString(), Inventario.NombreComercio);
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
-                            MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
-                        }
-
-                        this.Limpiar();
-
-                    } 
+                    }
 
                 } else
                 {

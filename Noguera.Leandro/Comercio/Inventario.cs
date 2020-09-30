@@ -203,36 +203,54 @@ namespace Comercio
         }
 
         /// <summary>
-        /// Hace una carga instantanea de 30 productos
+        /// Hace una carga instantanea de 20 productos no precederos
         /// </summary>
         public static void HardcodeoProductosNoPerecederos()
         {
-            string[] descripcion = new string[25] { "Azucar", "Yerba", "Chocolate", "Galletitas", "Pan lactal", 
-            "Jabon", "Shampoo", "Acondicionador", "Miel", "Cereales", "Fideos", "Gaseosa", "Jabon liquido",
-            "Dulce de leche", "Te", "Arroz", "Jabon en polvo", "Mate cocido", "Salsa de tomate",
+            string[] descripcion = new string[20] { "Azucar", "Yerba", "Chocolate", "Galletitas", "Pan lactal", 
+             "Miel", "Cereales", "Fideos", "Gaseosa", "Dulce de leche", "Te", "Arroz", "Mate cocido", "Salsa de tomate",
             "Arvejas", "Choclo", "Atun", "Jugo de naranja", "Jugo de manzana", "Caldo" };
 
-            double[] precio = new double[25] { 79, 54, 66, 140, 68, 130, 43, 135, 138, 150, 197, 88, 120, 78, 132,
-            123, 115, 63, 177, 48, 55, 68, 88, 91, 145};
+            double[] precio = new double[20] { 79, 54, 66, 140, 68, 130, 43, 135, 138, 150, 197, 88, 120, 78, 132,
+            123, 115, 63, 177, 48};
 
-            int[] idProducto = new int[25] { 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 16, 17, 20, 21, 22,
-                23, 24, 25, 26, 27, 28, 29, 30 };
+            int[] idProducto = new int[20] { 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 16, 17, 20, 21, 22, 23, 24, 25 };
 
-            int[] stock = new int[25] { 8, 7, 9, 3, 15, 23, 44, 18, 2, 4, 5, 6, 48, 63, 84, 91, 110, 50,
-            97, 99, 9, 9, 15, 27, 32, };
+            int[] stock = new int[20] { 8, 7, 9, 3, 15, 23, 44, 18, 2, 4, 5, 6, 48, 63, 84, 91, 97, 99, 9, 9 };
 
-            Producto.ETipo[] tipoProducto = new Producto.ETipo[25] {Producto.ETipo.noPerecedero,
+            Producto.ETipo[] tipoProducto = new Producto.ETipo[20] {Producto.ETipo.noPerecedero,
             Producto.ETipo.noPerecedero,Producto.ETipo.noPerecedero,Producto.ETipo.noPerecedero ,Producto.ETipo.noPerecedero,
             Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
             Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
             Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
             Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
-            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero,
-            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero};
+            Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero, Producto.ETipo.noPerecedero};
 
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < 20; i++)
             {
                 listaProductos.Add(new ProductoNoPerecedero(descripcion[i], idProducto[i], precio[i], stock[i], tipoProducto[i]));
+            }
+        }
+
+        /// <summary>
+        /// Hace una carga instantanea de 5 articulos de almacen
+        /// </summary>
+        public static void HardcodeoProductosAlmacen()
+        {
+            string[] descripcion = new string[5] { "Jabon", "Shampoo", "Acondicionador", "Jabon liquido", "Jabon en polvo"  };
+
+            double[] precio = new double[5] { 30, 140, 130, 135, 150 };
+
+            int[] idProducto = new int[5] { 26, 27, 28, 29, 30 };
+
+            int[] stock = new int[5] { 5, 6, 48, 63, 84};
+
+            Producto.ETipo[] tipoProducto = new Producto.ETipo[5] {Producto.ETipo.almacen, Producto.ETipo.almacen,
+            Producto.ETipo.almacen, Producto.ETipo.almacen, Producto.ETipo.almacen};
+
+            for (int i = 0; i < 5; i++)
+            {
+                listaProductos.Add(new ProductoAlmacen(descripcion[i], idProducto[i], precio[i], stock[i], tipoProducto[i]));
             }
         }
 

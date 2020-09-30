@@ -71,6 +71,7 @@ namespace FormularioComercio
             Inventario.HardcodeoEmpleados();
             Inventario.HardcodeoProductosNoPerecederos();
             Inventario.HardcodeoProductosPerecederos();
+            Inventario.HardcodeoProductosAlmacen();
             Inventario.HardcodeoCompras();
             auxSonido.SoundLocation = "C:/Users/CX SLIM/Desktop/Parciales_Prog_Labo_II/Noguera.Leandro/deskbell.wav";
 
