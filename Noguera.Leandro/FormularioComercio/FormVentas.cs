@@ -47,7 +47,7 @@ namespace FormularioComercio
             string nombre = (string)this.dgvListaEmpleados.CurrentRow.Cells["Nombre"].Value;
             string apellido = (string)this.dgvListaEmpleados.CurrentRow.Cells["Apellido"].Value;
 
-            auxListaVentas = Inventario.VentasPorEmpleado(idEmpleado);
+            auxListaVentas = Inventario.GetListaVentas(idEmpleado);
 
             this.lblEmpleado.Text = String.Concat("Empleado: ", nombre, ", ", apellido);
             this.CargarDatagrid();

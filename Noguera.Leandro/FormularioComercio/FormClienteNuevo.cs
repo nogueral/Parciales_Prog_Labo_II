@@ -47,7 +47,6 @@ namespace FormularioComercio
         {
             double dni;
 
-
             if (!Validar.ValidarString(this.txtApellido.Text) && !Validar.ValidarString(this.txtNombre.Text) && 
                 double.TryParse(this.txtDni.Text, out dni))
             {

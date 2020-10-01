@@ -86,7 +86,7 @@ namespace Comercio
         /// Devuelve el stock total de los productos cargados
         /// </summary>
         /// <returns></returns>
-        public static int StockTotal()
+        public static int VerStock()
         {
             int acumulador = 0;
 
@@ -99,16 +99,16 @@ namespace Comercio
         }
 
         /// <summary>
-        /// Devuelve una lista de productos con stock menor a 10 unidades
+        /// Devuelve una lista de productos con stock menor a la cantidad especificada
         /// </summary>
         /// <returns>List<> de tipo Producto</returns>
-        public static List<Producto> StockParcial()
+        public static List<Producto> VerStock(int cantidad)
         {
             List<Producto> auxProductos = new List<Producto>();
 
             for (int i = 0; i < listaProductos.Count; i++)
             {
-                if (listaProductos[i].Stock < 10)
+                if (listaProductos[i].Stock < cantidad)
                 {
                     auxProductos.Add(listaProductos[i]);
                 }
@@ -341,7 +341,7 @@ namespace Comercio
         /// </summary>
         /// <param name="idEmpleado"></param>
         /// <returns>una List<> de tipo Venta</returns>
-        public static List<Venta> VentasPorEmpleado(int idEmpleado)
+        public static List<Venta> GetListaVentas(int idEmpleado)
         {
             List<Venta> auxListaVentas = new List<Venta>();
 

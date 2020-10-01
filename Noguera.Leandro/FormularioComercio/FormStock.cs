@@ -31,7 +31,7 @@ namespace FormularioComercio
         /// <param name="e"></param>
         private void FormStock_Load(object sender, EventArgs e)
         {  
-            this.lblStockTotal.Text = Inventario.StockTotal().ToString();
+            this.lblStockTotal.Text = Inventario.VerStock().ToString();
 
             CargarDatagridStockTotal();
         }
@@ -43,7 +43,7 @@ namespace FormularioComercio
         {
             List<Producto> auxLista;
 
-            auxLista = Inventario.StockParcial();
+            auxLista = Inventario.VerStock(10);
 
             this.lblEncabezadoDgv.Text = "Productos con menos de 10 unidades en stock:";
 
