@@ -116,7 +116,7 @@
             this.lblEncabezadoMonto.Location = new System.Drawing.Point(68, 536);
             this.lblEncabezadoMonto.Name = "lblEncabezadoMonto";
             this.lblEncabezadoMonto.Size = new System.Drawing.Size(141, 27);
-            this.lblEncabezadoMonto.TabIndex = 7;
+            this.lblEncabezadoMonto.TabIndex = 8;
             this.lblEncabezadoMonto.Text = "Monto total: $";
             // 
             // lblMontoTotal
@@ -126,7 +126,7 @@
             this.lblMontoTotal.Location = new System.Drawing.Point(215, 535);
             this.lblMontoTotal.Name = "lblMontoTotal";
             this.lblMontoTotal.Size = new System.Drawing.Size(23, 27);
-            this.lblMontoTotal.TabIndex = 8;
+            this.lblMontoTotal.TabIndex = 9;
             this.lblMontoTotal.Text = "0";
             // 
             // lblProductos
@@ -136,7 +136,7 @@
             this.lblProductos.Location = new System.Drawing.Point(58, 15);
             this.lblProductos.Name = "lblProductos";
             this.lblProductos.Size = new System.Drawing.Size(515, 27);
-            this.lblProductos.TabIndex = 5;
+            this.lblProductos.TabIndex = 6;
             this.lblProductos.Text = "Agregue cantidad y haga doble click sobre el producto:";
             // 
             // txtCantidad
@@ -153,7 +153,7 @@
             this.label1.Location = new System.Drawing.Point(58, 271);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(396, 27);
-            this.label1.TabIndex = 6;
+            this.label1.TabIndex = 7;
             this.label1.Text = "Haga doble click para quitar un elemento:";
             // 
             // dgvProductos
@@ -222,7 +222,7 @@
             this.btnSalir.Location = new System.Drawing.Point(778, 514);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(140, 69);
-            this.btnSalir.TabIndex = 9;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);

@@ -129,7 +129,7 @@
             this.lblEmpleado.Location = new System.Drawing.Point(12, 9);
             this.lblEmpleado.Name = "lblEmpleado";
             this.lblEmpleado.Size = new System.Drawing.Size(110, 27);
-            this.lblEmpleado.TabIndex = 2;
+            this.lblEmpleado.TabIndex = 3;
             this.lblEmpleado.Text = "Empleado:";
             // 
             // lblVentasEmpleado
@@ -139,7 +139,7 @@
             this.lblVentasEmpleado.Location = new System.Drawing.Point(12, 216);
             this.lblVentasEmpleado.Name = "lblVentasEmpleado";
             this.lblVentasEmpleado.Size = new System.Drawing.Size(211, 27);
-            this.lblVentasEmpleado.TabIndex = 3;
+            this.lblVentasEmpleado.TabIndex = 4;
             this.lblVentasEmpleado.Text = "Ventas del empleado:";
             // 
             // btnSalir
@@ -149,7 +149,7 @@
             this.btnSalir.Location = new System.Drawing.Point(985, 486);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 58);
-            this.btnSalir.TabIndex = 4;
+            this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);

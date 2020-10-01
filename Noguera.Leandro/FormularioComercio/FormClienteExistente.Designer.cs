@@ -75,7 +75,7 @@
             this.dgvCliente.RowTemplate.Height = 31;
             this.dgvCliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCliente.Size = new System.Drawing.Size(600, 302);
-            this.dgvCliente.TabIndex = 1;
+            this.dgvCliente.TabIndex = 0;
             this.dgvCliente.DoubleClick += new System.EventHandler(this.dgvCliente_DoubleClick);
             // 
             // lblCliente
@@ -85,7 +85,7 @@
             this.lblCliente.Location = new System.Drawing.Point(44, 9);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(81, 27);
-            this.lblCliente.TabIndex = 0;
+            this.lblCliente.TabIndex = 2;
             this.lblCliente.Text = "Cliente:";
             // 
             // btnFinalizar
@@ -95,7 +95,7 @@
             this.btnFinalizar.Location = new System.Drawing.Point(282, 389);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(135, 49);
-            this.btnFinalizar.TabIndex = 2;
+            this.btnFinalizar.TabIndex = 1;
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);

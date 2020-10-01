@@ -49,7 +49,7 @@
             this.lblEncabezadoStock.Location = new System.Drawing.Point(37, 52);
             this.lblEncabezadoStock.Name = "lblEncabezadoStock";
             this.lblEncabezadoStock.Size = new System.Drawing.Size(242, 27);
-            this.lblEncabezadoStock.TabIndex = 2;
+            this.lblEncabezadoStock.TabIndex = 3;
             this.lblEncabezadoStock.Text = "Stock total de productos:";
             // 
             // lblStockTotal
@@ -59,7 +59,7 @@
             this.lblStockTotal.Location = new System.Drawing.Point(285, 52);
             this.lblStockTotal.Name = "lblStockTotal";
             this.lblStockTotal.Size = new System.Drawing.Size(107, 27);
-            this.lblStockTotal.TabIndex = 3;
+            this.lblStockTotal.TabIndex = 4;
             this.lblStockTotal.Text = "(Cantidad)";
             // 
             // dgvStockProductos
@@ -109,7 +109,7 @@
             this.dgvStockProductos.RowTemplate.Height = 31;
             this.dgvStockProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStockProductos.Size = new System.Drawing.Size(911, 248);
-            this.dgvStockProductos.TabIndex = 0;
+            this.dgvStockProductos.TabIndex = 6;
             // 
             // lblEncabezadoDgv
             // 
@@ -118,7 +118,7 @@
             this.lblEncabezadoDgv.Location = new System.Drawing.Point(37, 108);
             this.lblEncabezadoDgv.Name = "lblEncabezadoDgv";
             this.lblEncabezadoDgv.Size = new System.Drawing.Size(447, 27);
-            this.lblEncabezadoDgv.TabIndex = 4;
+            this.lblEncabezadoDgv.TabIndex = 5;
             this.lblEncabezadoDgv.Text = "Productos con menos de 10 unidades en stock:";
             // 
             // btnSalir
@@ -128,7 +128,7 @@
             this.btnSalir.Location = new System.Drawing.Point(852, 435);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(101, 56);
-            this.btnSalir.TabIndex = 1;
+            this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -140,7 +140,7 @@
             this.btnStockTotal.Location = new System.Drawing.Point(596, 435);
             this.btnStockTotal.Name = "btnStockTotal";
             this.btnStockTotal.Size = new System.Drawing.Size(224, 56);
-            this.btnStockTotal.TabIndex = 5;
+            this.btnStockTotal.TabIndex = 1;
             this.btnStockTotal.Text = "Total de productos";
             this.btnStockTotal.UseVisualStyleBackColor = false;
             this.btnStockTotal.Click += new System.EventHandler(this.btnStockTotal_Click);
@@ -152,7 +152,7 @@
             this.btnStockParcial.Location = new System.Drawing.Point(290, 435);
             this.btnStockParcial.Name = "btnStockParcial";
             this.btnStockParcial.Size = new System.Drawing.Size(284, 56);
-            this.btnStockParcial.TabIndex = 6;
+            this.btnStockParcial.TabIndex = 0;
             this.btnStockParcial.Text = "Stock menor a 10 unidades";
             this.btnStockParcial.UseVisualStyleBackColor = false;
             this.btnStockParcial.Click += new System.EventHandler(this.btnStockParcial_Click);

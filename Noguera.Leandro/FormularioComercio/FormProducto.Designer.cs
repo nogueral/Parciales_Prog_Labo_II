@@ -75,7 +75,7 @@
             this.lblDescripcion.Location = new System.Drawing.Point(121, 72);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(122, 27);
-            this.lblDescripcion.TabIndex = 8;
+            this.lblDescripcion.TabIndex = 10;
             this.lblDescripcion.Text = "Descripcion";
             // 
             // lblPrecio
@@ -85,7 +85,7 @@
             this.lblPrecio.Location = new System.Drawing.Point(121, 122);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(70, 27);
-            this.lblPrecio.TabIndex = 9;
+            this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "Precio";
             // 
             // lblStock
@@ -95,7 +95,7 @@
             this.lblStock.Location = new System.Drawing.Point(121, 181);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(62, 27);
-            this.lblStock.TabIndex = 10;
+            this.lblStock.TabIndex = 12;
             this.lblStock.Text = "Stock";
             // 
             // lblCargarProducto
@@ -105,7 +105,7 @@
             this.lblCargarProducto.Location = new System.Drawing.Point(265, 20);
             this.lblCargarProducto.Name = "lblCargarProducto";
             this.lblCargarProducto.Size = new System.Drawing.Size(224, 27);
-            this.lblCargarProducto.TabIndex = 6;
+            this.lblCargarProducto.TabIndex = 9;
             this.lblCargarProducto.Text = "CARGA DE PRODUCTO";
             // 
             // btnCargarProd
@@ -115,7 +115,7 @@
             this.btnCargarProd.Location = new System.Drawing.Point(252, 366);
             this.btnCargarProd.Name = "btnCargarProd";
             this.btnCargarProd.Size = new System.Drawing.Size(109, 50);
-            this.btnCargarProd.TabIndex = 4;
+            this.btnCargarProd.TabIndex = 5;
             this.btnCargarProd.Text = "Cargar ";
             this.btnCargarProd.UseVisualStyleBackColor = false;
             this.btnCargarProd.Click += new System.EventHandler(this.btnCargarProd_Click);
@@ -139,7 +139,7 @@
             this.btnStock.Location = new System.Drawing.Point(252, 446);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(393, 50);
-            this.btnStock.TabIndex = 6;
+            this.btnStock.TabIndex = 8;
             this.btnStock.Text = "Mostrar stock";
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
@@ -158,7 +158,7 @@
             this.lblId.Location = new System.Drawing.Point(126, 243);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(33, 27);
-            this.lblId.TabIndex = 11;
+            this.lblId.TabIndex = 13;
             this.lblId.Text = "ID";
             // 
             // btnLimpiar
@@ -168,7 +168,7 @@
             this.btnLimpiar.Location = new System.Drawing.Point(392, 366);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(109, 50);
-            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.TabIndex = 6;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
@@ -180,7 +180,7 @@
             this.cmbTipoProducto.Location = new System.Drawing.Point(311, 293);
             this.cmbTipoProducto.Name = "cmbTipoProducto";
             this.cmbTipoProducto.Size = new System.Drawing.Size(334, 32);
-            this.cmbTipoProducto.TabIndex = 12;
+            this.cmbTipoProducto.TabIndex = 4;
             // 
             // lblTipoProducto
             // 
@@ -189,7 +189,7 @@
             this.lblTipoProducto.Location = new System.Drawing.Point(126, 298);
             this.lblTipoProducto.Name = "lblTipoProducto";
             this.lblTipoProducto.Size = new System.Drawing.Size(142, 27);
-            this.lblTipoProducto.TabIndex = 13;
+            this.lblTipoProducto.TabIndex = 14;
             this.lblTipoProducto.Text = "Tipo producto";
             // 
             // formProducto

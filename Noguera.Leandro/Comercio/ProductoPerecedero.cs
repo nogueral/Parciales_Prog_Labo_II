@@ -33,7 +33,9 @@ namespace Comercio
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("PRODUCTO PERECEDERO");
+            sb.AppendLine("--------------------------------------------------------------");
             sb.AppendLine(base.Mostrar());
+            sb.AppendLine("--------------------------------------------------------------");
             sb.AppendLine("Recuerde que este producto debe conservarse a baja temperatura");
 
 

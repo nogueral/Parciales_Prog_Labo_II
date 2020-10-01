@@ -63,9 +63,12 @@ namespace FormularioComercio
             int stock;
             int id;
 
-            if(double.TryParse(this.txtPrecio.Text, out precio) && int.TryParse(this.txtStock.Text, out stock) 
+            this.txtPrecio.Text = this.txtPrecio.Text.Replace(".", ",");
+
+            if (double.TryParse(this.txtPrecio.Text, out precio) && int.TryParse(this.txtStock.Text, out stock) 
                 && !Validar.ValidarString(this.txtDescripcion.Text) && int.TryParse(this.txtId.Text, out id))
             {
+                
                 if(!Validar.CerosYnegativos(precio) && !Validar.CerosYnegativos(stock) && !Validar.CerosYnegativos(id))
                 {
                     if(this.cmbTipoProducto.SelectedIndex != -1)
@@ -86,7 +89,6 @@ namespace FormularioComercio
                                     MessageBox.Show("Producto previamente cargados", Inventario.NombreComercio);
                                     MessageBox.Show("Solo se modifico el stock disponibles", Inventario.NombreComercio);
                                 }
-
                                 this.Limpiar();
                                 break;
                             case Producto.ETipo.noPerecedero:

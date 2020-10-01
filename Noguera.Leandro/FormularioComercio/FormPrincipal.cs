@@ -149,9 +149,9 @@ namespace FormularioComercio
         /// </summary>
         private void ListaVentas()
         {
-            FormVentas auxFormVentas = new FormVentas();
+            FormVentas auxListadoVentas = new FormVentas();
 
-            auxFormVentas.Show();
+            auxListadoVentas.Show();
         }
 
         /// <summary>
@@ -179,9 +179,9 @@ namespace FormularioComercio
         /// </summary>
         private void NuevaCompra()
         {
-            FormCompra auxFormClienteExistente = new FormCompra();
+            FormCompra auxCompra = new FormCompra();
 
-            if (auxFormClienteExistente.ShowDialog() == DialogResult.OK)
+            if (auxCompra.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Gracias!! Vuelva prontosss", Inventario.NombreComercio);
             }

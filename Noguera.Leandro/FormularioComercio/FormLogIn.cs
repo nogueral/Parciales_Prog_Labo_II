@@ -104,7 +104,19 @@ namespace FormularioComercio
         {
             this.Close();
         }
-        #endregion 
+
+        /// <summary>
+        /// Elimina los espacios en blanco al principio y final de la cadena
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).Text = ((TextBox)sender).Text.Trim();
+        }
+
+        #endregion
+
 
     }
 }

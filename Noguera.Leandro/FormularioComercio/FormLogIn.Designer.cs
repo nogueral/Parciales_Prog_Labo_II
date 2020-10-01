@@ -43,6 +43,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(361, 29);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // txtClave
             // 
@@ -51,6 +52,7 @@
             this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(361, 29);
             this.txtClave.TabIndex = 1;
+            this.txtClave.Leave += new System.EventHandler(this.txtUsuario_Leave);
             // 
             // lblUsuario
             // 

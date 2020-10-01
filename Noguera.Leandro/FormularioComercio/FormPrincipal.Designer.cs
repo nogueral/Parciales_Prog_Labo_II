@@ -63,7 +63,7 @@
             this.btnCompra.Location = new System.Drawing.Point(21, 196);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(181, 48);
-            this.btnCompra.TabIndex = 1;
+            this.btnCompra.TabIndex = 2;
             this.btnCompra.Text = "Nueva compra ";
             this.btnCompra.UseVisualStyleBackColor = false;
             this.btnCompra.Click += new System.EventHandler(this.btnCompra_Click);
@@ -75,7 +75,7 @@
             this.btnVenta.Location = new System.Drawing.Point(21, 250);
             this.btnVenta.Name = "btnVenta";
             this.btnVenta.Size = new System.Drawing.Size(181, 48);
-            this.btnVenta.TabIndex = 2;
+            this.btnVenta.TabIndex = 3;
             this.btnVenta.Text = "Ventas";
             this.btnVenta.UseVisualStyleBackColor = false;
             this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
@@ -87,7 +87,7 @@
             this.btnStock.Location = new System.Drawing.Point(21, 142);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(181, 48);
-            this.btnStock.TabIndex = 3;
+            this.btnStock.TabIndex = 1;
             this.btnStock.Text = "Stock";
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);

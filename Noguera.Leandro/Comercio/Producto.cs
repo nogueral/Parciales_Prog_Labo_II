@@ -173,7 +173,6 @@ namespace Comercio
             sb.AppendLine($"Stock: {this.stock.ToString()}");
             sb.AppendLine($"ID Producto: {this.idProducto.ToString()}");
             sb.AppendLine(String.Format("Precio: ${0: #,###.00}", this.precio));
-            sb.AppendLine("-----------------------------------------------------------------------------------------");
 
             return sb.ToString();
         }

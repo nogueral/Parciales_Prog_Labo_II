@@ -16,27 +16,9 @@ namespace FormularioComercio
     public partial class FormCompra : Form
     {
         List<Compra> listaCompras;
-        double auxMontoTotal = 0;
+        double auxMontoTotal;
         SoundPlayer auxSonido;
         string directorio = Directory.GetCurrentDirectory();
-
-        #region Properties
-        /// <summary>
-        /// Getter monto total
-        /// </summary>
-        public double MontoTotal
-        {
-            get { return this.auxMontoTotal; }
-        }
-
-        /// <summary>
-        /// Getter Lista de compras
-        /// </summary>
-        public List<Compra> ListaCompras
-        {
-            get { return this.listaCompras; }
-        }
-        #endregion
 
         #region Constructor
         /// <summary>
@@ -47,6 +29,7 @@ namespace FormularioComercio
             InitializeComponent();
             listaCompras = new List<Compra>();
             auxSonido = new SoundPlayer();
+            auxMontoTotal = 0;
         }
         #endregion
 
@@ -80,7 +63,6 @@ namespace FormularioComercio
         /// <param name="e"></param>
         private void dgvCompra_DoubleClick(object sender, EventArgs e)
         {
-            string auxDescripcion = (string)dgvCompra.CurrentRow.Cells["Descripcion"].Value;
             double auxPrecio = (double)dgvCompra.CurrentRow.Cells["Precio"].Value;
             double auxId = (double)dgvCompra.CurrentRow.Cells["IdCompra"].Value;
 
@@ -206,7 +188,7 @@ namespace FormularioComercio
                         // Si el cliente es miembro de la familia Simpson, aplica descuento.
 
                         MessageBox.Show("Por ser miembros de la familia Simpson tiene un descuentos del 13%", Inventario.NombreComercio);
-                        double descuento = (auxMontoTotal) * 13 / 100;
+                        double descuento = (auxMontoTotal * 13) / 100;
                         double montoOriginal = auxMontoTotal;
                         auxMontoTotal = montoOriginal - descuento;
                         MessageBox.Show(String.Format("Total compras: ${0:#,###.00}\n Descuentos (13%): S{1:#,###.00}\n Montos abonados: ${2:#,###.00}",

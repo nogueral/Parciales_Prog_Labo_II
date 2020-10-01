@@ -32,7 +32,9 @@ namespace Comercio
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("PRODUCTO DE ALMACEN");
+            sb.AppendLine("---------------------------------------------------");
             sb.AppendLine(base.Mostrar());
+            sb.AppendLine("---------------------------------------------------");
             sb.AppendLine("NO colocar este producto en el sector de alimentos!");
 
 
