@@ -196,22 +196,7 @@ namespace FormularioComercio
 
                         // genera comprobante de compra
 
-                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio,"/ticketCompra"));
-                        auxComprobante.WriteLine(Inventario.NombreComercio);
-                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count-1].Ticket}");
-                        auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
-                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
-                        auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteNuevo.AuxCliente.Nombre} {auxClienteNuevo.AuxCliente.Apellido}"));
-                        foreach (var item in this.listaCompras)
-                        {
-                            auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
-                        }
-                        auxComprobante.WriteLine("Monto: ${0:###,##.00}", montoOriginal);
-                        auxComprobante.WriteLine("Descuento SIMPSON: ${0:###,##.00}", descuento);
-                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
-                        auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
-                        auxComprobante.WriteLine("Gracias! Vuelva prontosss");
-                        auxComprobante.Close();
+                        PrintTicket(auxClienteNuevo.AuxCliente, montoOriginal, descuento);
                     }
                     else
                     {
@@ -224,20 +209,8 @@ namespace FormularioComercio
 
                         // genera comprobante de compra
 
-                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
-                        auxComprobante.WriteLine(Inventario.NombreComercio);
-                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
-                        auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
-                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
-                        auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteNuevo.AuxCliente.Nombre} {auxClienteNuevo.AuxCliente.Apellido}"));
-                        foreach (var item in this.listaCompras)
-                        {
-                            auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
-                        }
-                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
-                        auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
-                        auxComprobante.WriteLine("Gracias! Vuelva prontosss");
-                        auxComprobante.Close();
+                        PrintTicket(auxClienteNuevo.AuxCliente);
+
                     }
 
                     // reproduce un sonido al finalizar la compra
@@ -254,6 +227,54 @@ namespace FormularioComercio
             }
 
 
+        }
+
+        /// <summary>
+        /// Imprime ticket de compra
+        /// </summary>
+        /// <param name="auxCliente"></param>
+        private void PrintTicket(Cliente auxCliente)
+        {
+            StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
+            auxComprobante.WriteLine(Inventario.NombreComercio);
+            auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
+            auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
+            auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
+            auxComprobante.WriteLine(String.Format($"Cliente: {auxCliente.Nombre} {auxCliente.Apellido}"));
+            foreach (var item in this.listaCompras)
+            {
+                auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
+            }
+            auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
+            auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
+            auxComprobante.WriteLine("Gracias! Vuelva prontosss");
+            auxComprobante.Close();
+        }
+
+        /// <summary>
+        /// Imprime ticket de compra (con descuento Simpson 13%)
+        /// </summary>
+        /// <param name="auxCliente"></param>
+        /// <param name="montoOriginal"></param>
+        /// <param name="descuento"></param>
+        private void PrintTicket(Cliente auxCliente, double montoOriginal, double descuento)
+        {
+            StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
+            auxComprobante.WriteLine(Inventario.NombreComercio);
+            auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
+            auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
+            auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
+            auxComprobante.WriteLine(String.Format($"Cliente: {auxCliente.Nombre} {auxCliente.Apellido}"));
+            foreach (var item in this.listaCompras)
+            {
+                auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
+            }
+            auxComprobante.WriteLine("Monto: ${0:###,##.00}", montoOriginal);
+            auxComprobante.WriteLine("Descuento SIMPSON: ${0:###,##.00}", descuento);
+            auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
+            auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
+            auxComprobante.WriteLine("Gracias! Vuelva prontosss");
+            auxComprobante.Close();
         }
 
         /// <summary>
@@ -287,22 +308,7 @@ namespace FormularioComercio
 
                         // genera comprobante de compra
 
-                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
-                        auxComprobante.WriteLine(Inventario.NombreComercio);
-                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
-                        auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
-                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
-                        auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteExistente.AuxCliente.Nombre} {auxClienteExistente.AuxCliente.Apellido}"));
-                        foreach (var item in this.listaCompras)
-                        {
-                            auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
-                        }
-                        auxComprobante.WriteLine("Monto: ${0:###,##.00}", montoOriginal);
-                        auxComprobante.WriteLine("Descuento SIMPSON: ${0:###,##.00}", descuento);
-                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
-                        auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
-                        auxComprobante.WriteLine("Gracias! Vuelva prontosss");
-                        auxComprobante.Close();
+                        PrintTicket(auxClienteExistente.AuxCliente, montoOriginal, descuento);
                     }
                     else
                     {
@@ -315,20 +321,7 @@ namespace FormularioComercio
 
                         // genera comprobante de compra
 
-                        StreamWriter auxComprobante = new StreamWriter(String.Concat(directorio, "/ticketCompra"));
-                        auxComprobante.WriteLine(Inventario.NombreComercio);
-                        auxComprobante.WriteLine($"Ticket Nro: {Inventario.ListaVentas[Inventario.ListaVentas.Count - 1].Ticket}");
-                        auxComprobante.WriteLine(DateTime.Now.ToLongDateString());
-                        auxComprobante.WriteLine(DateTime.Now.ToString("hh:mm:ss"));
-                        auxComprobante.WriteLine(String.Format($"Cliente: {auxClienteExistente.AuxCliente.Nombre} {auxClienteExistente.AuxCliente.Apellido}"));
-                        foreach (var item in this.listaCompras)
-                        {
-                            auxComprobante.WriteLine("Item: {0: -10} Precio: ${1:###,##.00}", item.Descripcion, item.Precio);
-                        }
-                        auxComprobante.WriteLine("Total a abonar: ${0:###,##.00}", auxMontoTotal);
-                        auxComprobante.WriteLine(String.Format($"Empleado: {Inventario.EmpleadoLogueado.Nombre} {Inventario.EmpleadoLogueado.Apellido}"));
-                        auxComprobante.WriteLine("Gracias! Vuelva prontosss");
-                        auxComprobante.Close();
+                        PrintTicket(auxClienteExistente.AuxCliente);
                     }
 
 
