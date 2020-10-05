@@ -19,6 +19,7 @@ namespace FormularioComercio
         double auxMontoTotal;
         SoundPlayer auxSonido;
         string directorio = Directory.GetCurrentDirectory();
+        bool compraEfectuada = false;
 
         #region Constructor
         /// <summary>
@@ -185,6 +186,8 @@ namespace FormularioComercio
                         Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
 
+                        compraEfectuada = true;
+
                         // Si el cliente es miembro de la familia Simpson, aplica descuento.
 
                         MessageBox.Show("Por ser miembros de la familia Simpson tiene un descuentos del 13%", Inventario.NombreComercio);
@@ -206,6 +209,8 @@ namespace FormularioComercio
 
                         Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteNuevo.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
+
+                        compraEfectuada = true;
 
                         // genera comprobante de compra
 
@@ -306,6 +311,8 @@ namespace FormularioComercio
                         Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteExistente.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
 
+                        compraEfectuada = true;
+
                         // genera comprobante de compra
 
                         PrintTicket(auxClienteExistente.AuxCliente, montoOriginal, descuento);
@@ -318,6 +325,8 @@ namespace FormularioComercio
 
                         Inventario.ListaVentas.Add(new Venta(Inventario.EmpleadoLogueado, auxClienteExistente.AuxCliente,
                         this.listaCompras, this.auxMontoTotal));
+
+                        compraEfectuada = true;
 
                         // genera comprobante de compra
 
@@ -348,6 +357,29 @@ namespace FormularioComercio
         {
             this.Close();
         }
+
+        /// <summary>
+        /// Si la compra no se efectua, se resstablece el stock inicial
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FormCompra_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!compraEfectuada)
+            {
+                for (int i = 0; i < listaCompras.Count; i++)
+                {
+                    for (int j = 0; j < Inventario.ListaProductos.Count; j++)
+                    {
+                        if(listaCompras[i].IdCompra == Inventario.ListaProductos[j].Id)
+                        {
+                            Inventario.ListaProductos[j].Stock++;
+                        }
+                    }
+                }
+            }
+        }
+
 
         #endregion
 

@@ -72,6 +72,8 @@ namespace FormularioComercio
         {
             this.Close();
         }
+
+
         #endregion
 
 

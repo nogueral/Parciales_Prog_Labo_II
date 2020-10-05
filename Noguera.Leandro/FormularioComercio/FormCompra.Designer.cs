@@ -251,6 +251,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCompra_FormClosing);
             this.Load += new System.EventHandler(this.FormCompraClienteExistente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Comercio
 {
-    public class Persona
+    public abstract class Persona
     {
         protected string nombre;
         protected string apellido;
