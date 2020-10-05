@@ -374,6 +374,7 @@ namespace FormularioComercio
                         if(listaCompras[i].IdCompra == Inventario.ListaProductos[j].Id)
                         {
                             Inventario.ListaProductos[j].Stock++;
+                            break;
                         }
                     }
                 }
