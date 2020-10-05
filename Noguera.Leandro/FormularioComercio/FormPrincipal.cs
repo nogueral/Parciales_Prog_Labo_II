@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Comercio;
 using System.Media;
+using System.IO;
 
 namespace FormularioComercio
 {
@@ -16,6 +17,7 @@ namespace FormularioComercio
     {
         bool login = false;
         SoundPlayer auxSonido;
+        string directorio = Directory.GetCurrentDirectory();
 
         #region Constructor
         /// <summary>
@@ -73,7 +75,7 @@ namespace FormularioComercio
             Inventario.HardcodeoProductosPerecederos();
             Inventario.HardcodeoProductosAlmacen();
             Inventario.HardcodeoCompras();
-            auxSonido.SoundLocation = "C:/Users/CX SLIM/Desktop/Parciales_Prog_Labo_II/Noguera.Leandro/deskbell.wav";
+            auxSonido.SoundLocation = String.Concat(directorio, "/deskbell.wav");
 
             FormLogIn auxLogin = new FormLogIn();
 

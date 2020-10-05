@@ -43,7 +43,7 @@ namespace FormularioComercio
         private void FormCompraClienteExistente_Load(object sender, EventArgs e)
         {
             this.dgvProductos.DataSource = Inventario.ListaProductos;
-            auxSonido.SoundLocation = "C:/Users/CX SLIM/Desktop/Parciales_Prog_Labo_II/Noguera.Leandro/deskbell.wav";
+            auxSonido.SoundLocation = String.Concat(directorio, "/deskbell.wav");
         }
 
         /// <summary>
