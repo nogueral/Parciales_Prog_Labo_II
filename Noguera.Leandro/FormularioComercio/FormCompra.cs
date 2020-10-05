@@ -64,38 +64,41 @@ namespace FormularioComercio
         /// <param name="e"></param>
         private void dgvCompra_DoubleClick(object sender, EventArgs e)
         {
-            double auxPrecio = (double)dgvCompra.CurrentRow.Cells["Precio"].Value;
-            double auxId = (double)dgvCompra.CurrentRow.Cells["IdCompra"].Value;
-
-            // recorre la lista y elimina el objeto
-
-            for (int i = 0; i < listaCompras.Count; i++)
+            if (listaCompras.Count > 0)
             {
-                if (listaCompras[i].IdCompra == auxId)
+                double auxPrecio = (double)dgvCompra.CurrentRow.Cells["Precio"].Value;
+                double auxId = (double)dgvCompra.CurrentRow.Cells["IdCompra"].Value;
+
+                // recorre la lista y elimina el objeto
+
+                for (int i = 0; i < listaCompras.Count; i++)
                 {
-                    listaCompras.Remove(listaCompras[i]);
-                    break;
+                    if (listaCompras[i].IdCompra == auxId)
+                    {
+                        listaCompras.Remove(listaCompras[i]);
+                        break;
+                    }
                 }
-            }
 
-            // elimina el valor del monto total
+                // elimina el valor del monto total
 
-            auxMontoTotal -= auxPrecio;
+                auxMontoTotal -= auxPrecio;
 
-            // recorre el listado de productos, y aumenta el stock del objeto eliminado
+                // recorre el listado de productos, y aumenta el stock del objeto eliminado
 
-            for (int i = 0; i < Inventario.ListaProductos.Count; i++)
-            {
-                if (Inventario.ListaProductos[i].Id == auxId)
+                for (int i = 0; i < Inventario.ListaProductos.Count; i++)
                 {
-                    Inventario.ListaProductos[i].Stock += 1;
+                    if (Inventario.ListaProductos[i].Id == auxId)
+                    {
+                        Inventario.ListaProductos[i].Stock += 1;
+                    }
                 }
+
+                // actualiza los datagridviews y el label que muestra el valor total
+
+                CargarDatagrid();
+                lblMontoTotal.Text = auxMontoTotal.ToString();
             }
-
-            // actualiza los datagridviews y el label que muestra el valor total
-
-            CargarDatagrid();
-            lblMontoTotal.Text = auxMontoTotal.ToString();
         }
 
         /// <summary>
@@ -172,7 +175,7 @@ namespace FormularioComercio
         {
             
 
-            if (auxMontoTotal > 0)
+            if (listaCompras.Count > 0)
             {
                 FormClienteNuevo auxClienteNuevo = new FormClienteNuevo();
                 
@@ -289,7 +292,7 @@ namespace FormularioComercio
         /// <param name="e"></param>
         private void btnClienteExistente_Click(object sender, EventArgs e)
         {
-            if (auxMontoTotal > 0)
+            if (listaCompras.Count > 0)
             {
                 FormClienteExistente auxClienteExistente = new FormClienteExistente();
 
