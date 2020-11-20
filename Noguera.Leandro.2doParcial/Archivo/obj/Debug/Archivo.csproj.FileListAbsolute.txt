@@ -1,0 +1,9 @@
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\bin\Debug\Archivo.dll
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\bin\Debug\Archivo.pdb
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\bin\Debug\Excepciones.dll
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\bin\Debug\Excepciones.pdb
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\obj\Debug\Archivo.csprojAssemblyReference.cache
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\obj\Debug\Archivo.csproj.CoreCompileInputs.cache
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\obj\Debug\Archivo.csproj.CopyComplete
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\obj\Debug\Archivo.dll
+C:\Users\CX SLIM\Desktop\Parciales_Prog_Labo_II\Noguera.Leandro.2doParcial\Archivo\obj\Debug\Archivo.pdb

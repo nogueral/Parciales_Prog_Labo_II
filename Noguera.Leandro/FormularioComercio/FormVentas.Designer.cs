@@ -165,6 +165,7 @@
             this.Controls.Add(this.lblEmpleado);
             this.Controls.Add(this.dgvListaVentas);
             this.Controls.Add(this.dgvListaEmpleados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
